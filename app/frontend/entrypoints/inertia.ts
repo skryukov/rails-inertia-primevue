@@ -1,5 +1,9 @@
-import { createInertiaApp } from '@inertiajs/vue3'
-import { createApp, DefineComponent, h } from 'vue'
+import {createInertiaApp} from '@inertiajs/vue3'
+import {createApp, DefineComponent, h} from 'vue'
+import PrimeVue from 'primevue/config';
+import Button from "primevue/button";
+import Aura from '@primeuix/themes/aura';
+
 
 createInertiaApp({
   // Set default page title
@@ -27,9 +31,14 @@ createInertiaApp({
     // return page
   },
 
-  setup({ el, App, props, plugin }) {
-    createApp({ render: () => h(App, props) })
-      .use(plugin)
+  setup({el, App, props, plugin}) {
+    createApp({render: () => h(App, props)})
+      .use(plugin).use(PrimeVue, {
+      theme: {
+        preset: Aura,
+      }
+    })
+      .component('Button', Button)
       .mount(el)
   },
 })
