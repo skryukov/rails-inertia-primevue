@@ -2,7 +2,7 @@
   <Head title="Inertia + Vite Ruby + Vue Example" />
 
   <div class="root">
-    <h1 class="h1">Hello {{ name }}!</h1>
+    <h1 class="text-[3.2em] leading-[1.1]">Hello {{ name }}!</h1>
 
     <div>
       <a href="https://inertia-rails.dev" target="_blank">
@@ -63,10 +63,6 @@ const count = ref(0)
   text-align: center;
 }
 
-.h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
 .h2 {
   font-size: 2.6em;

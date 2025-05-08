@@ -1,7 +1,6 @@
 import {createInertiaApp} from '@inertiajs/vue3'
 import {createApp, DefineComponent, h} from 'vue'
 import PrimeVue from 'primevue/config';
-import Button from "primevue/button";
 import Aura from '@primeuix/themes/aura';
 
 
@@ -38,7 +37,6 @@ createInertiaApp({
         preset: Aura,
       }
     })
-      .component('Button', Button)
       .mount(el)
   },
 })
